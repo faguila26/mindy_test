@@ -40,6 +40,11 @@ INSTALLED_APPS = [
     'rest_framework',  # <- DRF para la API
     'profiles',        # <- app personalizada
     'django_cron',
+    'corsheaders',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",  # Dirección de tu frontend (Vue.js)
 ]
 
 LOGGING = {
@@ -78,6 +83,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'pf_backend.urls'
