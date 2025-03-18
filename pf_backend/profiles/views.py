@@ -19,7 +19,7 @@ def get_user_profile(request, user_id):
     return Response({
         'id': profile.id,
         'email': profile.email,
-        'next_available_slot': profile.next_available_slot,
+        'next_hour': profile.next_hour,
     })
 
 class UserProfileListAPIView(ListAPIView):

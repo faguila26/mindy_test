@@ -3,7 +3,7 @@ from django.db import models
 # profiles/models.py
 class UserProfile(models.Model):
     email = models.EmailField(unique=True)
-    next_available_slot = models.DateTimeField()
+    next_hour = models.DateTimeField()
 
     def __str__(self):
         return self.email
